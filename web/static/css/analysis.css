@@ -1,0 +1,130 @@
+.data-index-name {
+    font-size: 150%;
+    background-color: rgb(255, 167, 10);
+    text-align: center;
+}
+.data-index-key {
+    font-size: 200%;
+    background-color: rgb(255, 167, 10);
+    text-align: center;
+}
+.data-index-value {
+    font-size: 100%;
+    background-color: rgb(255, 241, 217);
+    text-align: center;
+}
+.data-index-name-1 {
+    font-size: 150%;
+    background-color: rgb(255, 167, 10);
+    text-align: center;
+}
+.data-index-key-1 {
+    font-size: 200%;
+    background-color: rgb(255, 167, 10);
+    text-align: center;
+}
+.data-index-value-1 {
+    font-size: 100%;
+    background-color: rgb(255, 241, 217);
+    text-align: center;
+}
+.data-index-name-2 {
+    font-size: 150%;
+    background-color: rgb(102, 205, 153);
+    text-align: center;
+}
+.data-index-key-2 {
+    font-size: 200%;
+    background-color: rgb(102, 205, 153);
+    text-align: center;
+}
+.data-index-value-2 {
+    font-size: 100%;
+    background-color: rgb(217, 243, 229);
+    text-align: center;
+}
+.data-index-name-3 {
+    font-size: 150%;
+    background-color: #FF8989;
+    text-align: center;
+}
+.data-index-key-3 {
+    font-size: 200%;
+    background-color: #FF8989;
+    text-align: center;
+}
+.data-index-value-3 {
+    font-size: 100%;
+    background-color: #FFE1E1;
+    text-align: center;
+}
+.data-index-main-value {
+    font-size: 150%;
+    background-color: white;
+    color: gray;
+    font-weight: 'normal';
+}
+.report-head {
+    font-size: 200%;
+    color : black;
+
+    background-color: white;
+}
+.report-title {
+     font-size: 150%;
+     background-color: rgb(231, 232, 236);
+     text-align: center;
+     color : red;
+}
+.report-di {
+
+    text-align: center;
+    font-size: 120%;
+    background-color: rgb(241, 242, 246);
+}
+
+.report-di-value {
+
+    text-align: center;
+    font-size: 250%;
+    background-color: rgb(241, 242, 246);
+}
+.report-di-percent {
+    text-align: center;
+    font-size: 100%;
+    color :red;
+    background-color: rgb(241, 242, 246);
+}
+.report-td {
+    padding :1px;
+    text-align: center;
+    font-size: 100%;
+    color :red;
+    background-color: rgb(241, 242, 246);
+}
+
+.report-tr {
+    padding :1px;
+ 
+    background-color: rgb(241, 242, 246);
+}
+
+.report-tr-1 {
+    padding :1px;
+
+    background-color: white;
+}
+.report-th {
+    padding :1px;
+
+    background-color: rgb(231, 232, 236);
+}
+
+.panel {
+    border: 0;
+}
+
+.table > thead > tr > th, .table > thead > tr > td {
+    border: 0;
+}
+

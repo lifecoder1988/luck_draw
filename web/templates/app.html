@@ -1,0 +1,111 @@
+{% extends 'layouts/%s.html' %template_layout if template_layout != none else 'layouts/default.html' %} {% block head %} {{ super() }}
+<script>
+$(function() {
+    $('.input-daterange').datepicker({
+        weekStart: 1,
+        todayBtn: "linked",
+        language: "zh-CN",
+        multidate: false,
+        autoclose: true,
+        todayHighlight: true
+    });
+    $('.btn-group').on('hide.bs.dropdown', function(e) {
+        e.preventDefault()
+    })
+    $('.btn-group').on('show.bs.dropdown', function(e) {
+        e.preventDefault()
+    })
+    $('.btn-group button').on('click', function(e) {
+        e.preventDefault()
+        if (e.target.id == 'picker1') {
+            var dropdown = $(e.target).parent()
+            if ($(dropdown).hasClass('open')) {
+                $(dropdown).removeClass("open")
+            } else {
+                $(dropdown).addClass("open")
+            }
+            console.log()
+        } else if (e.target.id == 'picker_icon1') {
+            var dropdown = $(e.target).parent().parent()
+            console.log(dropdown)
+            if ($(dropdown).hasClass('open')) {
+                $(dropdown).removeClass("open")
+            } else {
+                $(dropdown).addClass("open")
+            }
+        } else if (e.target.name == 'aRecent7Days') {
+
+        } else if (e.target.name == 'aRecent14Days') {
+
+        } else if (e.target.name == 'aRecent30Days') {
+
+        } else if (e.target.name == 'right') {
+            var dropdown = $(e.target).parent().parent().parent()
+            $(dropdown).removeClass("open")
+            console.log($(e.target).parent().parent().parent())
+        } else if (e.target.name == 'cancel') {
+            var dropdown = $(e.target).parent().parent().parent()
+            $(dropdown).removeClass("open")
+
+        }
+    });
+
+});
+</script>
+
+{% endblock %} {% block content %}
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                关键指标详解</span>
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default">新增APP数量</button>
+                    <button type="button" class="btn btn-default">新增APP激活数</button>
+                    <button type="button" class="btn btn-default">APP活跃度</button>
+                    <button type="button" class="btn btn-default">新增用户数</button>
+                    <button type="button" class="btn btn-default">APP总数</button>
+                    <button type="button" class="btn btn-default">APP总激活数</button>
+                    <button type="button" class="btn btn-default">总用户数</button>
+                </div>
+                <br> 时间
+                <div id="datepicker1" class="btn-group" role="group" aria-label="...">
+                    <button name="aRecent7Days" type="button" class="btn btn-default">7天</button>
+                    <button name="aRecent14Days" type="button" class="btn btn-default">14天</button>
+                    <button name="aRecent30Days" type="button" class="btn btn-default">30天</button>
+
+                    <button id="picker1" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                        0000-00-00 至 0000-00-00
+                        <span class="caret"></span>
+
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                            <div class="input-daterange input-group" id="datepicker">
+                                <input type="text" class="input-sm form-control" name="start" />
+                                <span class="input-group-addon">到</span>
+                                <input type="text" class="input-sm form-control" name="end" />
+                            </div>
+                        </li>
+                        <li role="presentation">
+                            <button name="right" type="button" class="btn btn-default">确定</button>
+                            <button name="cancel" type="button" class="btn btn-default">取消</button>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+
+            </div>
+            <!-- /.panel-body -->
+        </div>
+    </div>
+    <div class="col-lg-4">
+    </div>
+</div>
+
+{% endblock %}
